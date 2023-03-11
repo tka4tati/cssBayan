@@ -25,11 +25,9 @@ h1 > span {
 p {
     font-size: 1.9em;
     margin: 1em;
+    width: 70%;
 }
-img {
-    width: 30em;
-    height: auto;
-}
+
 input {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -57,15 +55,34 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+}
+.bayan__item-meme > img {
+    width: 30em;
+    height: auto;
 }
 .bayan__item-label {
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.bayan__item-icon {
+    background-image: url(./assets/images/expand_more.svg);
+    background-repeat: no-repeat;
+    width: 3em;
+    height: 2em;
+    padding: 0.5em;
 }
 
-
-
-
+.bayan__item:hover  .bayan__item-icon {
+    background-image: url(./assets/images/expand_less.svg);
+    background-repeat: no-repeat;
+}
+.bayan__item:active  .bayan__item-icon {
+    background-image: url(./assets/images/expand_less.svg);
+    background-repeat: no-repeat;
+}
 .bayan__item:hover > .bayan__item-meme {
     max-height: 100vh;
     transition: max-height 0.8s ease-in;
