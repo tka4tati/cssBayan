@@ -15,7 +15,7 @@ h1 {
     font-size: 3em;
     text-align: center;
     width: 10em;
-    margin: 1em 1em 3em;
+    margin: 1em 1em 2em;
 }
 h1 > span {
     font-weight: 600;
@@ -29,4 +29,50 @@ p {
 img {
     width: 30em;
     height: auto;
+}
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+.bayan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500vh;
+    width: 100%;
+    margin: 1em 0 5em;
+}
+
+.bayan__item {
+   overflow: hidden;
+   width: 100%;
+   
+}
+.bayan__item-meme {
+    max-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.bayan__item-label {
+    cursor: pointer;
+}
+
+
+
+
+.bayan__item:hover > .bayan__item-meme {
+    max-height: 100vh;
+    transition: max-height 0.8s ease-in;
+   
+}
+input:checked ~ .bayan__item-meme {
+    max-height: 100vh;
+    transition: max-height 0.8s ease-in;
+   
 }
