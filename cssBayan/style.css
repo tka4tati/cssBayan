@@ -1,14 +1,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
 
+/* commons */
 * {
     margin: 0;
     padding: 0;
 }
+/* fonts */
 h1, p {
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    
 }
 h1 {
     letter-spacing: 0.1em;
@@ -34,6 +35,7 @@ input {
     appearance: none;
 }
 
+/* general */
 
 .bayan {
     display: flex;
@@ -44,12 +46,43 @@ input {
     width: 100%;
     margin: 1em 0 5em;
 }
-
 .bayan__item {
-   overflow: hidden;
-   width: 100%;
-   
+    overflow: hidden;
+    width: 100%;
+ }
+ .bayan__item-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
+
+/* bayan icons */
+
+.bayan__item-icon {
+    width: 3em;
+    height: 0;
+    padding: 0.5em;
+    background-image: url(./assets/images/expand_more.svg);
+    background-repeat: no-repeat;
+}
+.bayan__container:hover .bayan__item-icon {
+    height: 2em;
+    background-position: center;
+}
+input:checked ~ .bayan__item-label > .bayan__item-icon {
+    transform: rotate(180deg);
+    transition: transform 0.4s ease-in; 
+}
+
+.bayan__item:hover  .bayan__item-icon {
+    transform: rotate(180deg);
+    transition: transform 0.4s ease-in; 
+}
+
+/* bayan meme */
+
 .bayan__item-meme {
     max-height: 0;
     display: flex;
@@ -60,36 +93,11 @@ input {
     width: 30em;
     height: auto;
 }
-.bayan__item-label {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-.bayan__item-icon {
-    background-image: url(./assets/images/expand_more.svg);
-    background-repeat: no-repeat;
-    width: 3em;
-    height: 2em;
-    padding: 0.5em;
-}
-
-.bayan__item:hover  .bayan__item-icon {
-    background-image: url(./assets/images/expand_less.svg);
-    background-repeat: no-repeat;
-}
-.bayan__item:active  .bayan__item-icon {
-    background-image: url(./assets/images/expand_less.svg);
-    background-repeat: no-repeat;
-}
 .bayan__item:hover > .bayan__item-meme {
     max-height: 100vh;
     transition: max-height 0.8s ease-in;
-   
 }
 input:checked ~ .bayan__item-meme {
     max-height: 100vh;
     transition: max-height 0.8s ease-in;
-   
 }
