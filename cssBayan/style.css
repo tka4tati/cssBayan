@@ -88,16 +88,28 @@ input:checked ~ .bayan__item-label > .bayan__item-icon {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transform: scale(95%);
 }
 .bayan__item-meme > img {
     width: 30em;
     height: auto;
+    opacity: 0.8;
 }
 .bayan__item:hover > .bayan__item-meme {
     max-height: 100vh;
-    transition: max-height 0.8s ease-in;
+    transition: all 1s ease-in;
+    transform: scale(100%);
+}
+.bayan__item:hover > .bayan__item-meme > img {
+    opacity: 1;
+    transition: all 1s ease-in;
 }
 input:checked ~ .bayan__item-meme {
     max-height: 100vh;
-    transition: max-height 0.8s ease-in;
+    transition: all 1s ease-in;
+    transform: scale(100%);
+}
+input:checked ~ .bayan__item-meme > img {
+    opacity: 1;
+    transition: all 1s ease-in;
 }
