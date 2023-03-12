@@ -117,12 +117,12 @@ input:checked ~ .bayan__item-label > .bayan__item-icon {
 
 input:checked ~ .bayan__item-meme {
     max-height: 100vh;
-    transition: all 1s ease-in;
+    transition: all 1s ease-in-out;
     transform: scale(100%);
 }
 input:checked ~ .bayan__item-meme > img {
     opacity: 1;
-    transition: all 1s ease-in;
+    transition: all 1s ease-in-out;
 }
 
 @media screen and (min-width: 1200px) {
@@ -151,13 +151,13 @@ input:checked ~ .bayan__item-meme > img {
     }
     .bayan__item:hover > .bayan__item-meme {
         max-height: 100vh;
-        transition: all 1s ease-in;
+        transition: all 1s ease-in-out;
         transform: scale(100%);
         cursor: pointer;
     }
     .bayan__item:hover > .bayan__item-meme > img {
         opacity: 1;
-        transition: all 1s ease-in;
+        transition: all 1s ease-in-out;
     }
     .bayan__item:active p {
         color: #05386B;
