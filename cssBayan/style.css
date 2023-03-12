@@ -57,18 +57,25 @@ input {
 .bayan__container {
     background-color: #5CDB95;
 }
+input:checked ~ .bayan__item-label > p {
+    color: #EDF5E1;
+}
 .bayan__container:hover p {
     color: #EDF5E1;
 }
 .bayan__item {
     overflow: hidden;
     width: 100%;
-    
 }
-.bayan__item:hover {
+.bayan__item:active {
     background-color: #8EE4AF;
+    opacity: 0.9;
     transition: all 0.3s ease-in-out;
 }
+.bayan__item:active p {
+    color: #05386B;
+}
+
 .bayan__item-label {
     cursor: pointer;
     display: flex;
