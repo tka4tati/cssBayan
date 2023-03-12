@@ -60,9 +60,7 @@ input {
 input:checked ~ .bayan__item-label > p {
     color: #EDF5E1;
 }
-.bayan__container:hover p {
-    color: #EDF5E1;
-}
+
 .bayan__item {
     overflow: hidden;
     width: 100%;
@@ -93,19 +91,13 @@ input:checked ~ .bayan__item-label > p {
     background-repeat: no-repeat;
     margin-right: 2em;
 }
-.bayan__container:hover .bayan__item-icon {
-    height: 2em;
-    background-position: center;
-}
+
 input:checked ~ .bayan__item-label > .bayan__item-icon {
     transform: rotate(180deg);
     transition: transform 0.4s ease-in; 
 }
 
-.bayan__item:hover  .bayan__item-icon {
-    transform: rotate(180deg);
-    transition: transform 0.4s ease-in; 
-}
+
 
 /* bayan meme */
 
@@ -122,15 +114,7 @@ input:checked ~ .bayan__item-label > .bayan__item-icon {
     opacity: 0.8;
     padding-bottom: 3em;
 }
-.bayan__item:hover > .bayan__item-meme {
-    max-height: 100vh;
-    transition: all 1s ease-in;
-    transform: scale(100%);
-}
-.bayan__item:hover > .bayan__item-meme > img {
-    opacity: 1;
-    transition: all 1s ease-in;
-}
+
 input:checked ~ .bayan__item-meme {
     max-height: 100vh;
     transition: all 1s ease-in;
@@ -139,4 +123,106 @@ input:checked ~ .bayan__item-meme {
 input:checked ~ .bayan__item-meme > img {
     opacity: 1;
     transition: all 1s ease-in;
+}
+
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 4em;
+    }
+    h1 > span {
+        font-size: 2em;
+    }
+    p {
+        font-size: 2em;
+    }
+    .bayan__item-meme > img {
+        width: 40em;
+    }
+    .bayan__container:hover p {
+        color: #EDF5E1;
+    }
+    .bayan__container:hover .bayan__item-icon {
+        height: 2em;
+        background-position: center;
+    }
+    .bayan__item:hover  .bayan__item-icon {
+        transform: rotate(180deg);
+        transition: transform 0.4s ease-in; 
+    }
+    .bayan__item:hover > .bayan__item-meme {
+        max-height: 100vh;
+        transition: all 1s ease-in;
+        transform: scale(100%);
+        cursor: pointer;
+    }
+    .bayan__item:hover > .bayan__item-meme > img {
+        opacity: 1;
+        transition: all 1s ease-in;
+    }
+    .bayan__item:active p {
+        color: #05386B;
+    }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1199.98px) {
+    body {
+        padding: 0 1em;
+    }
+    h1 {
+        letter-spacing: 0.1em;
+        font-size: 2.8em;
+        text-align: center;
+        width: 10em;
+        margin: 1em 1em;
+        padding: 1em;
+    }
+    h1 > span {
+        font-size: 1em;
+    }
+    p {
+        font-size: 1.5em;
+        margin: 0.5em;
+        width: 70%;
+    }
+    .bayan__item-meme > img {
+        width: 20em;
+    }
+    .bayan__item-icon {
+        margin-right: 1em;
+        height: 2em;
+    }
+}
+@media screen and (max-width: 819.98px) {
+    body {
+        padding: 0 1em;
+        cursor:none;
+    }
+    h1 {
+        letter-spacing: 0.1em;
+        font-size: 1.6em;
+        text-align: center;
+        width: 8em;
+        margin: 0.5em 0.5em;
+        padding: 0.5em;
+    }
+    h1 > span {
+        font-size: 0.8em;
+    }
+    p {
+        font-size: 1em;
+        margin: 0.2em;
+        width: 70%;
+    }
+    .bayan__item-meme > img {
+        width: 10em;
+        padding: 1em;
+    }
+    .bayan__item-icon {
+        width: 2.5em;
+        margin-right: 0;
+    }
+    .bayan__item-icon {
+        height: 2em;
+        background-position: center;
+    }
 }
