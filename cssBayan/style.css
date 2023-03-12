@@ -192,7 +192,7 @@ input:checked ~ .bayan__item-meme > img {
         height: 2em;
     }
 }
-@media screen and (max-width: 819.98px) {
+@media screen and (max-width: 819.98px) or [(pointer: none) or (hover: none)] {
     body {
         padding: 0 1em;
         cursor:none;
