@@ -1,7 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
 
-/* commons */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +8,6 @@
 body {
     background-color: #5CDB95;
 }
-/* fonts */
 h1, p {
     font-family: "Inter", sans-serif;
     font-weight: 500;
@@ -36,15 +34,11 @@ p {
     width: 70%;
     color: #05386B;
 }
-
 input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 }
-
-/* general */
-
 .bayan {
     display: flex;
     flex-direction: column;
@@ -60,7 +54,6 @@ input {
 input:checked ~ .bayan__item-label > p {
     color: #EDF5E1;
 }
-
 .bayan__item {
     overflow: hidden;
     width: 100%;
@@ -73,7 +66,6 @@ input:checked ~ .bayan__item-label > p {
 .bayan__item:active p {
     color: #05386B;
 }
-
 .bayan__item-label {
     cursor: pointer;
     display: flex;
@@ -81,9 +73,6 @@ input:checked ~ .bayan__item-label > p {
     justify-content: space-between;
     width: 100%;
 }
-
-/* bayan icons */
-
 .bayan__item-icon {
     width: 3em;
     height: 0;
@@ -91,16 +80,10 @@ input:checked ~ .bayan__item-label > p {
     background-repeat: no-repeat;
     margin-right: 2em;
 }
-
 input:checked ~ .bayan__item-label > .bayan__item-icon {
     transform: rotate(180deg);
     transition: transform 0.4s ease-in; 
 }
-
-
-
-/* bayan meme */
-
 .bayan__item-meme {
     max-height: 0;
     display: flex;
@@ -114,7 +97,6 @@ input:checked ~ .bayan__item-label > .bayan__item-icon {
     opacity: 0.8;
     padding-bottom: 3em;
 }
-
 input:checked ~ .bayan__item-meme {
     max-height: 100vh;
     transition: all 1s ease-in-out;
@@ -124,7 +106,6 @@ input:checked ~ .bayan__item-meme > img {
     opacity: 1;
     transition: all 1s ease-in-out;
 }
-
 @media screen and (min-width: 1200px) {
     h1 {
         font-size: 4em;
