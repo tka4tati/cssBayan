@@ -173,7 +173,7 @@ input:checked ~ .bayan__item-meme > img {
         height: 2em;
     }
 }
-@media screen and (max-width: 819.98px) or [(pointer: none) or (hover: none)] {
+@media screen and (min-width: 400.98px) and (max-width: 819.98px)  {
     body {
         padding: 0 1em;
         cursor:none;
@@ -207,3 +207,38 @@ input:checked ~ .bayan__item-meme > img {
         background-position: center;
     }
 }
+@media screen and (max-width: 400px) {
+    body {
+        padding: 0 1em;
+        cursor:none;
+    }
+    h1 {
+        letter-spacing: 0.1em;
+        font-size: 1em;
+        text-align: center;
+        width: 6em;
+        margin: 0;
+        padding: 0;
+    }
+    h1 > span {
+        font-size: 0.6em;
+    }
+    p {
+        font-size: 0.5em;
+        margin: 0.2em;
+        width: 100%;
+    }
+    .bayan__item-meme > img {
+        width: 10em;
+        padding: 1em;
+    }
+    .bayan__item-icon {
+        width: 2em;
+        margin-right: 0;
+    }
+    .bayan__item-icon {
+        height: 1.5em;
+        background-position: center;
+    }
+}
+
