@@ -106,19 +106,7 @@ input:checked ~ .bayan__item-meme > img {
     opacity: 1;
     transition: all 1s ease-in-out;
 }
-@media screen and (min-width: 1200px) {
-    h1 {
-        font-size: 4em;
-    }
-    h1 > span {
-        font-size: 2em;
-    }
-    p {
-        font-size: 2em;
-    }
-    .bayan__item-meme > img {
-        width: 40em;
-    }
+@media (hover:hover) {
     .bayan__container:hover p {
         color: #EDF5E1;
     }
@@ -140,11 +128,24 @@ input:checked ~ .bayan__item-meme > img {
         opacity: 1;
         transition: all 1s ease-in-out;
     }
+}
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 4em;
+    }
+    h1 > span {
+        font-size: 2em;
+    }
+    p {
+        font-size: 2em;
+    }
+    .bayan__item-meme > img {
+        width: 40em;
+    }
     .bayan__item:active p {
         color: #05386B;
     }
 }
-
 @media screen and (min-width: 820px) and (max-width: 1199.98px) {
     body {
         padding: 0 1em;
