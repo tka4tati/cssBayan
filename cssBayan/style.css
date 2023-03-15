@@ -1,0 +1,245 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #5CDB95;
+}
+h1, p {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+h1 {
+    letter-spacing: 0.1em;
+    font-size: 3em;
+    text-align: center;
+    width: 10em;
+    margin: 1em 1em 2em;
+    color: #05386B;
+    background-color: #EDF5E1;
+    padding: 1em 2em;
+}
+h1 > span {
+    font-weight: 600;
+    letter-spacing: 0;
+    font-size: 1.5em;
+    color: #379683;
+}
+p {
+    font-size: 1.9em;
+    margin: 1em;
+    width: 70%;
+    color: #05386B;
+}
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.bayan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 1em 0 5em;
+    background-color: #5CDB95;
+}
+.bayan__container {
+    background-color: #5CDB95;
+}
+input:checked ~ .bayan__item-label > p {
+    color: #EDF5E1;
+}
+.bayan__item {
+    overflow: hidden;
+    width: 100%;
+}
+.bayan__item:active {
+    background-color: #8EE4AF;
+    opacity: 0.9;
+    transition: all 0.3s ease-in-out;
+}
+.bayan__item:active p {
+    color: #05386B;
+}
+.bayan__item-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.bayan__item-icon {
+    width: 3em;
+    height: 0;
+    background-image: url(./assets/images/expand_more.svg);
+    background-repeat: no-repeat;
+    margin-right: 2em;
+}
+input:checked ~ .bayan__item-label > .bayan__item-icon {
+    transform: rotate(180deg);
+    transition: transform 0.4s ease-in; 
+}
+.bayan__item-meme {
+    max-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(95%);
+}
+.bayan__item-meme > img {
+    width: 30em;
+    height: auto;
+    opacity: 0.8;
+    padding-bottom: 3em;
+}
+input:checked ~ .bayan__item-meme {
+    max-height: 100vh;
+    transition: all 1s ease-in-out;
+    transform: scale(100%);
+}
+input:checked ~ .bayan__item-meme > img {
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+@media (hover:hover) {
+    .bayan__container:hover p {
+        color: #EDF5E1;
+    }
+    .bayan__container:hover .bayan__item-icon {
+        height: 2em;
+        background-position: center;
+    }
+    .bayan__item:hover  .bayan__item-icon {
+        transform: rotate(180deg);
+        transition: transform 0.4s ease-in; 
+    }
+    .bayan__item:hover > .bayan__item-meme {
+        max-height: 100vh;
+        transition: all 1s ease-in-out;
+        transform: scale(100%);
+        cursor: pointer;
+    }
+    .bayan__item:hover > .bayan__item-meme > img {
+        opacity: 1;
+        transition: all 1s ease-in-out;
+    }
+}
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 4em;
+    }
+    h1 > span {
+        font-size: 2em;
+    }
+    p {
+        font-size: 2em;
+    }
+    .bayan__item-meme > img {
+        width: 40em;
+    }
+    .bayan__item:active p {
+        color: #05386B;
+    }
+}
+@media screen and (min-width: 820px) and (max-width: 1199.98px) {
+    body {
+        padding: 0 1em;
+    }
+    h1 {
+        letter-spacing: 0.1em;
+        font-size: 2.8em;
+        text-align: center;
+        width: 10em;
+        margin: 1em 1em;
+        padding: 1em;
+    }
+    h1 > span {
+        font-size: 1em;
+    }
+    p {
+        font-size: 1.5em;
+        margin: 0.5em;
+        width: 70%;
+    }
+    .bayan__item-meme > img {
+        width: 20em;
+    }
+    .bayan__item-icon {
+        margin-right: 1em;
+        height: 2em;
+    }
+}
+@media screen and (min-width: 400.98px) and (max-width: 819.98px)  {
+    body {
+        padding: 0 1em;
+        cursor:none;
+    }
+    h1 {
+        letter-spacing: 0.1em;
+        font-size: 1.6em;
+        text-align: center;
+        width: 8em;
+        margin: 0.5em 0.5em;
+        padding: 0.5em;
+    }
+    h1 > span {
+        font-size: 0.8em;
+    }
+    p {
+        font-size: 1em;
+        margin: 0.2em;
+        width: 70%;
+    }
+    .bayan__item-meme > img {
+        width: 10em;
+        padding: 1em;
+    }
+    .bayan__item-icon {
+        width: 2.5em;
+        margin-right: 0;
+    }
+    .bayan__item-icon {
+        height: 2em;
+        background-position: center;
+    }
+}
+@media screen and (max-width: 400px) {
+    body {
+        padding: 0 1em;
+        cursor:none;
+    }
+    h1 {
+        letter-spacing: 0.1em;
+        font-size: 1em;
+        text-align: center;
+        width: 6em;
+        margin: 0;
+        padding: 0;
+    }
+    h1 > span {
+        font-size: 0.6em;
+    }
+    p {
+        font-size: 0.5em;
+        margin: 0.2em;
+        width: 100%;
+    }
+    .bayan__item-meme > img {
+        width: 10em;
+        padding: 1em;
+    }
+    .bayan__item-icon {
+        width: 2em;
+        margin-right: 0;
+    }
+    .bayan__item-icon {
+        height: 1.5em;
+        background-position: center;
+    }
+}
+
